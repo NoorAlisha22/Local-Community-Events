@@ -88,7 +88,7 @@ export default function RSVP({ events, rsvps, addRSVP }) {
         )}
       </div>
 
-      <Modal open={open} onClose={() => setOpen(false)} title="RSVP Confirmed">
+      <Modal open={open} onClose={() => setOpen(false)} title="RSVP Confirmed" className="Popup">
         <p style={{ marginTop: 0 }}>
           Your RSVP {currentEvent ? `for "${currentEvent.title}"` : ''} has been recorded.
         </p>

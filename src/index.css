@@ -5,31 +5,93 @@
   --muted: #666;
   --primary: #1f6feb;
   --border: #e6e6e6;
-}
 
 * { box-sizing: border-box; }
 html, body, #root { height: 100%; }
 body {
+  min-height: 100vh;
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
+  padding: 0;
+  background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+  background-color: #0a0a23;
+  color: #e0e6f0;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Add stars effect */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity: 0.3;
+}
+
+/* Optional: add a subtle glow to main containers */
+.app-container, .main-content, .modal {
+  background: rgba(20, 24, 38, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.7);
+  padding: 24px;
+  margin: 24px auto;
+  max-width: 900px;
+}
+
+/* Make sure all text is readable */
+h1, h2, h3, h4, h5, h6, p, label, span, a {
+  color: #e0e6f0;
+}
+
+/* Accent colors for buttons/links */
+button, .btn, a {
+  background: linear-gradient(90deg, #3a3a7c 0%, #1e90ff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 8px 0 rgba(30,144,255,0.2);
+}
+button:hover, .btn:hover, a:hover {
+  background: linear-gradient(90deg, #1e90ff 0%, #3a3a7c 100%);
+  box-shadow: 0 4px 16px 0 rgba(30,144,255,0.4);
+}
+
+/* Scrollbar styling for dark theme */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #181c2b;
+}
+::-webkit-scrollbar-thumb {
+  background: #2c5364;
+  border-radius: 8px;
+}
 }
 
 .container { padding: 16px; max-width: 1100px; margin: 0 auto; }
 
 /* Navbar */
 .navbar {
-  background: #111;
+  background: #0b0f10;
   color: #fff;
   padding: 12px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.navbar h1 { margin: 0; font-size: 18px; }
+.navbar h1 { margin: 0; font-size: 18px;  }
 .navlinks a {
-  color: #fff;
+  background:none;
+  box-shadow:none;
+  color: #fff; 
   text-decoration: none;
   margin-left: 14px;
   padding: 6px 8px;
@@ -65,13 +127,30 @@ body {
   .grid { grid-template-columns: 1fr; }
 }
 .card {
-  background: var(--card);
-  border: 1px solid var(--border);
+  background: rgba(24, 28, 43, 0.95);
+  border: 1px solid #2c5364;
   border-radius: 12px;
   padding: 14px;
+  color: #e0e6f0;
+  box-shadow: 0 2px 16px 0 rgba(30,144,255,0.08);
+  transition: transform 0.18s cubic-bezier(0.4,0.2,0.2,1), box-shadow 0.18s cubic-bezier(0.4,0.2,0.2,1);
 }
-.card h3 { margin: 0 0 4px; font-size: 18px; }
-.meta { color: var(--muted); font-size: 14px; }
+
+.card:hover {
+  transform: scale(1.035);
+  box-shadow: 0 8px 32px 0 rgba(30,144,255,0.25), 0 1.5px 8px 0 rgba(0,0,0,0.18);
+  z-index: 2;
+}
+.card h3 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  color: #fff;
+  text-shadow: 0 1px 4px #1e223a;
+}
+.meta {
+  color: #b0b8d1;
+  font-size: 14px;
+}
 .actions { margin-top: 10px; display: flex; gap: 8px; }
 .btn {
   display: inline-block;
@@ -87,7 +166,8 @@ body {
 
 /* Detail */
 .detail {
-  background: var(--card);
+  background: rgba(24, 28, 43, 0.95);
+  transition: transform 0.1s cubic-bezier(0.4,0.2,0.2,1), box-shadow 0.18s cubic-bezier(0.4,0.2,0.2,1);
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 16px;
@@ -138,9 +218,18 @@ body {
   display: flex; align-items: center; justify-content: center;
 }
 .modalCard {
-  background: var(--card);
+  background: rgba(24, 28, 43, 0.95);
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 18px;
   width: min(92vw, 440px);
+}
+.form {
+  background: rgba(24, 28, 43, 0.95);
+  transition: transform 0.1s cubic-bezier(0.4,0.2,0.2,1), box-shadow 0.18s cubic-bezier(0.4,0.2,0.2,1);
+}
+.form:hover {
+  transform: scale(1.025);
+  box-shadow: 0 8px 32px 0 rgba(30,144,255,0.25), 0 1.5px 8px 0 rgba(0,0,0,0.18);
+  z-index: 2;
 }
