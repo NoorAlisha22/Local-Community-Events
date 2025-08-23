@@ -1,4 +1,4 @@
-# Community Events (React + Vite)
+# Local Community Events (React + Vite)
 
 Plain CSS • Local JSON • React Router • State only (no backend)
 
