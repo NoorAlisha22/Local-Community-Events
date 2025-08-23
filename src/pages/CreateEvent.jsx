@@ -28,7 +28,7 @@ export default function CreateEvent({ addEvent }) {
 
   return (
     <div>
-      <h2 style={{ marginTop: 0 }}>Create Event (Optional)</h2>
+      <h2 style={{ marginTop: 0 }}>Create Event</h2>
       <form className="form" onSubmit={handleSubmit}>
         <div className="row">
           <div>
