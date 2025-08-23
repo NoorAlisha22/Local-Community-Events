@@ -31,12 +31,15 @@ export default function RSVP({ events, rsvps, addRSVP }) {
       name, email, guests: Number(guests), comments, timestamp: new Date().toISOString()
     })
     setOpen(true) // show confirmation
-    // reset form (optional, keep email)
     setName('')
     setEmail('')
     setGuests(1)
     setComments('')
   }
+  
+  const handleInvalid = (e) => {
+        e.target.setCustomValidity('🤯Enter the valid input😵');
+  };
 
   return (
     <div>
@@ -50,18 +53,18 @@ export default function RSVP({ events, rsvps, addRSVP }) {
         <div className="row">
           <div>
             <label>Name</label>
-            <input className="input" value={name} onChange={e => setName(e.target.value)} placeholder="Your name" />
+            <input className="input" value={name} onChange={e => setName(e.target.value)} placeholder="Your name" required/>
           </div>
           <div>
             <label>Email</label>
-            <input className="input" type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="you@example.com" />
+            <input className="input" onInvalid={handleInvalid} type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="you@example.com" required />
           </div>
         </div>
 
         <div className="row">
           <div>
             <label>Guests</label>
-            <input className="input" type="number" min="1" value={guests} onChange={e => setGuests(e.target.value)} />
+            <input className="input" type="number" min="1" value={guests} onChange={e => setGuests(e.target.value)} required />
           </div>
           <div>
             <label>Comments</label>

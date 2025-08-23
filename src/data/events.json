@@ -5,7 +5,7 @@
     { "id": 3, "title": "Startup Networking Meetup", "type": "Meetup", "date": "2025-08-25", "location": "Delhi", "host": "Delhi Entrepreneurs Club", "description": "Meet fellow entrepreneurs, pitch ideas, and network." },
     { "id": 4, "title": "Digital Marketing Seminar", "type": "Workshop", "date": "2025-08-28", "location": "Hyderabad", "host": "Marketing Gurus", "description": "Learn the latest trends and strategies in digital marketing." },
     { "id": 5, "title": "Weekend Trek to Nandi Hills", "type": "Sports", "date": "2025-08-30", "location": "Bangalore", "host": "Adventure Trails", "description": "An early morning trek to Nandi Hills followed by breakfast." },
-    { "id": 6, "title": "Art & Craft for Kids", "type": "Workshop", "date": "2025-09-01", "location": "Pune", "host": "Creative Hands", "description": "Fun and educational art activities for children aged 6–12." },
+    { "id": 6, "title": "Art & Craft for Kids", "type": "Workshop", "date": "2025-09-01", "location": "Pune", "host": "Creative Hands", "description": "Fun and educational art activities for children aged 6-12." },
     { "id": 7, "title": "City Photography Walk", "type": "Meetup", "date": "2025-09-03", "location": "Chennai", "host": "Lens Lovers Club", "description": "Explore the city while improving your photography skills." },
     { "id": 8, "title": "Cooking Masterclass: Italian Cuisine", "type": "Workshop", "date": "2025-09-05", "location": "Kolkata", "host": "Chef Maria", "description": "Learn to cook authentic Italian dishes from scratch." },
     { "id": 9, "title": "Live Jazz Night", "type": "Music", "date": "2025-09-07", "location": "Goa", "host": "Goa Jazz Club", "description": "An evening of live jazz performances by local musicians." },
