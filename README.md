@@ -2,6 +2,10 @@
 
 Plain CSS • Local JSON • React Router • State only (no backend)
 
+## Preview
+
+<img width="1920" height="1080" alt="events" src="https://github.com/user-attachments/assets/2e5f0726-4548-4c4a-a353-33de72e4a17d" />
+
 ## Features
 - Home / Explore (grid)
 - Search & Filters (type, date range, location)
