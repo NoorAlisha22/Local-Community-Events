@@ -310,6 +310,7 @@ button:hover, .btn:hover, a:hover {
   color: #fff;
   font-size: 2.7rem;
   margin-bottom: 1rem;
+  text-align: center;
   text-shadow: 0 2px 16px #1e223a, 0 0 8px #3bb2b8;
 }
 .intro-desc {
